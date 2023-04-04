@@ -7,7 +7,9 @@ A cloud-polling Home Assistant component to expose ChargePoint Home Charger and 
 ## Installation
 
 While we are waiting to get included in the default HACS repositories, you can
-manually include this repository in HACS:
+manually include this repository in HACS or install the integration manually.
+
+### HACS Installation method
 
 1. If you haven't already installed HACS, follow [their instructions](https://hacs.xyz/docs/setup/prerequisites).
 2. Navigate to HACS.
@@ -20,10 +22,18 @@ manually include this repository in HACS:
    5. Click `Add`.
 5. Install the integration like you would [any other HACS addon](https://hacs.xyz/docs/navigation/overview).
 
+### Manual installation method
+
+HACS isn't required to use the ChargePoint integration. You can install the CharePoint integration manually:
+
+1. Clone the repo to temporary directory `git clone https://github.com/mbillow/ha-chargepoint.git`
+2. Copy the `custom-components/config` directory to the HAS configuration directory `/config` (The config directory may differ depnding on your HA installation). The resulting directory structure should look like this: `/config/custom-components/chargepoint`
+3. Restart HAS
+
 ## Usage
 
 Once you have installed the component, you'll need to add and configure it. From the 
-`Configuration > Devices & Services` page, click `+ Add Integration` in the bottom 
+`Settings > Devices & Services` page, click `+ Add Integration` in the bottom 
 right.
 
 Search for ChargePoint and select the integration. You will be prompted for your
@@ -32,7 +42,6 @@ ChargePoint credentials.
 Once you are logged in, if you have any home chargers, you will be asked which zones/rooms
 to assign each device to. Otherwise, you will just see a sensor exposing your account 
 balance.
-
 
 ## Energy Tracking
 
